@@ -1,0 +1,73 @@
+.cards-quicklink > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.cards-quicklink > ul > li {
+  border: 1px solid #f0e2d6;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
+  padding: 24px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.cards-quicklink > ul > li:hover {
+  border-color: var(--brand-orange);
+  box-shadow: 0 6px 16px rgb(238 111 34 / 12%);
+}
+
+.cards-quicklink .cards-quicklink-card-body {
+  margin: 0;
+}
+
+/* Navy, bold labels matching the source. */
+.cards-quicklink .cards-quicklink-card-body a {
+  color: var(--brand-navy);
+  font-weight: 700;
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+.cards-quicklink .cards-quicklink-card-body a:hover {
+  color: var(--brand-orange);
+}
+
+/* Orange circular icon badge. */
+.cards-quicklink .cards-quicklink-card-image {
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: var(--brand-orange-tint);
+}
+
+.cards-quicklink .cards-quicklink-card-image img {
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+@media (width < 900px) {
+  .cards-quicklink > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .cards-quicklink > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,20 +1,100 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--brand-navy);
+  color: #fff;
   font-size: var(--body-font-size-xs);
 }
 
+/* The fragment wrapper centers the footer content. */
 footer .footer > div {
   margin: auto;
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  padding: 48px 24px 24px;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* Three stacked bands: link columns, app panel, copyright. */
+footer .footer .section {
+  padding: 0 0 32px;
+}
+
+/* Link columns: the first band lays its 6 groups out in a row. */
+footer .footer .section:first-child {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px 24px;
+}
+
+footer .footer .section:first-child > div {
+  min-width: 0;
+}
+
+footer .footer h2 {
+  font-size: var(--body-font-size-s);
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+footer .footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer .footer a {
+  color: #d7e0ec;
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+footer .footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* App-download band. */
+footer .footer .section:nth-child(2) h3 {
+  color: #fff;
+  margin: 0 0 16px;
+}
+
+footer .footer .section:nth-child(2) p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+footer .footer .section:nth-child(2) a {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 6px;
+  color: #fff;
+}
+
+/* Copyright band. */
+footer .footer .section:last-child {
+  border-top: 1px solid rgb(255 255 255 / 20%);
+  text-align: center;
+  color: #b8c4d6;
+  padding: 20px 0 0;
+}
+
+@media (width < 900px) {
+  footer .footer .section:first-child {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  footer .footer .section:first-child {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "url": "http://localhost:8899/serve-index.html",
+  "path": "index",
+  "timestamp": "2026-08-12T08:55:49.840Z",
+  "title": "",
+  "template": "homepage",
+  "blocks": [
+    "carousel-promo",
+    "columns-strip",
+    "cards-quicklink",
+    "cards-video",
+    "cards-fund",
+    "cards-category",
+    "form-lead"
+  ]
+}

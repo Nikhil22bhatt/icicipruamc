@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-category",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "category-nav",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "illustrated icon + centered category label link per card, arranged in a 3-column grid",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "fund/product category navigation grids",
+      "illustrated icon + label tiles in a fixed multi-column grid",
+      "'browse by category' sections"
+    ],
+    "notSuitableFor": [
+      "media cards with thumbnails (use cards-video)",
+      "metric-driven product cards (use cards-fund)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}

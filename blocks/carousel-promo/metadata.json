@@ -1,0 +1,38 @@
+{
+  "variantName": "carousel-promo",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "spacious",
+    "purpose": "hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + subheading + up to 2 CTAs per slide",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero promotional banners",
+      "rotating campaign slideshows with image + heading + CTAs",
+      "top-of-page marketing carousels"
+    ],
+    "notSuitableFor": [
+      "single static banner (use hero)",
+      "grids of uniform items (use cards)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-strip",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "accent",
+    "density": "compact",
+    "purpose": "feature",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + title/subtitle + CTA in a single horizontal strip",
+    "buttonCount": 1,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "compact horizontal promo strips (icon + text + CTA)",
+      "single-row side-by-side informational bands",
+      "announcement/introducing banners"
+    ],
+    "notSuitableFor": [
+      "large hero banners (use hero or carousel)",
+      "repeating card grids (use cards)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}
