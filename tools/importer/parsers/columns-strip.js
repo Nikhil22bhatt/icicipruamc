@@ -13,9 +13,19 @@
  * Those are intentionally IGNORED — only the meaningful content is extracted.
  * Generated: 2026-08-12
  */
+// The source rupee-coins icon is an SVG that wraps a 1536x1024 raster (~281KB) —
+// far over the EDS pipeline's 40KB SVG limit, which blocks page preview/publish.
+// A downsized local PNG copy lives at /icons/funds/golden-rupee-coins.png.
+const COINS_SVG_RE = /goldenRupeeCoins[^"']*\.svg/i;
+const COINS_LOCAL = '/icons/funds/golden-rupee-coins.png';
+
 export default function parse(element, { document }) {
   // --- Cell 1: rupee icon (real raster image, not the decorative base64 SVGs) ---
   const iconImage = element.querySelector('img.rupee-image, .rupee-image-wrapper img.rupee-image');
+  // Swap the oversized source SVG for the compact local asset so html2md accepts it.
+  if (iconImage && COINS_SVG_RE.test(iconImage.getAttribute('src') || '')) {
+    iconImage.setAttribute('src', COINS_LOCAL);
+  }
 
   // --- Cell 2: title + iSIF logo + subtitle ---
   const title = element.querySelector('.banner-title');
