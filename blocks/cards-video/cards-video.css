@@ -21,12 +21,33 @@
 .cards-video .cards-video-card-image {
   line-height: 0;
   position: relative;
+  aspect-ratio: 16 / 9;
+  background-color: #eef1f5;
 }
 
 .cards-video .cards-video-card-image img {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
+}
+
+/* Play affordance over each thumbnail, matching the source. */
+.cards-video .cards-video-card-image::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--brand-orange) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>') no-repeat center / 20px 20px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+}
+
+/* Neutral placeholder when a source thumbnail is unavailable (404 at origin). */
+.cards-video .cards-video-card-image.cards-video-thumb-missing {
+  background-color: #dfe4ea;
 }
 
 .cards-video .cards-video-card-body h3 {
