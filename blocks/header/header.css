@@ -270,3 +270,50 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+
+/* ICICI brand accents */
+header nav .nav-brand a {
+  color: var(--brand-navy);
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
+  text-decoration: none;
+}
+
+header nav .nav-sections .default-content-wrapper > ul > li {
+  color: var(--brand-navy);
+  font-weight: 600;
+}
+
+header nav .nav-sections a:hover {
+  color: var(--brand-orange);
+}
+
+/* Investor + Sign In tools row */
+/* stylelint-disable-next-line no-descending-specificity */
+header nav .nav-tools ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+header nav .nav-tools a {
+  color: var(--brand-navy);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Style the last tool link ("Sign In") as an orange button. */
+header nav .nav-tools li:last-child a {
+  background-color: var(--brand-orange);
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+}
+
+header nav .nav-tools li:last-child a:hover {
+  background-color: var(--brand-orange-dark);
+}

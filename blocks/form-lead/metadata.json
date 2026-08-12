@@ -1,0 +1,39 @@
+{
+  "variantName": "form-lead",
+  "baseBlock": "form",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "lead-form",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "illustrative image + heading + tagline + static form fields (name; +91(IND) mobile; city/state) + submit button",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "static contact / consult / callback lead forms",
+      "image + short form panels reproduced faithfully as static markup",
+      "'drop your number and we'll call you back' style panels"
+    ],
+    "notSuitableFor": [
+      "forms requiring real submission / backend validation (use a forms integration)",
+      "multi-step or conditional forms"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  },
+  "notes": "Custom static block: no vanilla 'form' block exists in the library and the forms-excat plugin was not available, so this was created as a standard custom block per block-variant-manager fallback. The form is inert (no submission handler)."
+}

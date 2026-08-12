@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-video",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "video-media",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "video thumbnail (with play overlay) + title link + duration per card",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "knowledge-centre / media video card rows",
+      "thumbnail + title + duration link cards",
+      "video gallery previews"
+    ],
+    "notSuitableFor": [
+      "icon-only shortcut tiles (use cards-quicklink)",
+      "data-rich fund/product cards (use cards-fund)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}

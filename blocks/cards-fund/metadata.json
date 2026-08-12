@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-fund",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-fund",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "riskometer image + fund name + plan + category chips + CAGR% + as-on date + Invest CTA per card",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "recommended scheme / fund product cards",
+      "cards showing a headline metric (CAGR/return) with an as-on date",
+      "financial product cards with a primary CTA"
+    ],
+    "notSuitableFor": [
+      "icon shortcut tiles (use cards-quicklink)",
+      "video media cards (use cards-video)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}

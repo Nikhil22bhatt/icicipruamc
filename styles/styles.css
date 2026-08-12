@@ -19,6 +19,13 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* ICICI Prudential brand palette */
+  --brand-orange: #ee6f22;
+  --brand-orange-dark: #d34d15;
+  --brand-orange-tint: #fce7d8;
+  --brand-navy: #1b3f6f;
+  --brand-page-bg: #fff8f2;
+
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
   --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
@@ -73,7 +80,7 @@
 body {
   display: none;
   margin: 0;
-  background-color: var(--background-color);
+  background-color: var(--brand-page-bg);
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
@@ -110,6 +117,7 @@ h6 {
   font-weight: 600;
   line-height: 1.25;
   scroll-margin: 40px;
+  color: var(--brand-navy);
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }

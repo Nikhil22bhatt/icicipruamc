@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-quicklink",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-08-12T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.icicipruamc.com/",
+    "originPage": "ICICI Prudential AMC homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "quick-links-nav",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "circular icon + short label link per card",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "quick-link / shortcut icon card rows",
+      "compact navigational icon+label grids",
+      "help-center or service shortcut tiles"
+    ],
+    "notSuitableFor": [
+      "content-rich cards with descriptions (use cards or a richer variant)",
+      "image-heavy media cards (use cards-video)"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-12T00:00:00.000Z"
+  }
+}

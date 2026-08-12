@@ -1,0 +1,10 @@
+{
+  "sites": {
+    "icicipruamc": {
+      "previewOrg": "nikhil22bhatt",
+      "previewSite": "icicipruamc",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  },
+  "type": "doc"
+}

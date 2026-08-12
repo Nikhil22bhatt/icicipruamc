@@ -20,7 +20,13 @@ import {
  */
 export async function loadFragment(path) {
   if (path && path.startsWith('/') && !path.startsWith('//')) {
-    const resp = await fetch(`${path}.plain.html`);
+    // Try the given path first; in local preview the content is served under
+    // /content/, so fall back to that prefix when the root path 404s
+    // (e.g. header/footer fragments at /nav and /footer).
+    let resp = await fetch(`${path}.plain.html`);
+    if (!resp.ok && !path.startsWith('/content/')) {
+      resp = await fetch(`/content${path}.plain.html`);
+    }
     if (resp.ok) {
       const main = document.createElement('main');
       main.innerHTML = await resp.text();

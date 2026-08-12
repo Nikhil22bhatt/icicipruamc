@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "projectType": "doc"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.icicipruamc.com/"
+      ],
+      "coverageGaps": [],
+      "description": "ICICI Prudential AMC homepage: hero carousel, iSIF promo strip, quick links, knowledge centre (video/blog tabs), recommended schemes, our funds categories, consult-experts lead form. Includes header nav with mega-menus and full footer.",
+      "blocks": [
+        {
+          "name": "carousel-promo",
+          "instances": [
+            ".promotional-bannerv2"
+          ]
+        },
+        {
+          "name": "columns-strip",
+          "instances": [
+            ".sif-banner.sif-banner-home"
+          ]
+        },
+        {
+          "name": "cards-quicklink",
+          "instances": [
+            ".quick-links-list"
+          ]
+        },
+        {
+          "name": "cards-video",
+          "instances": [
+            "#kc-tabpanel"
+          ]
+        },
+        {
+          "name": "cards-fund",
+          "instances": [
+            ".funds-section .fund-wrapper"
+          ]
+        },
+        {
+          "name": "cards-category",
+          "instances": [
+            ".promotional-card-container"
+          ]
+        },
+        {
+          "name": "form-lead",
+          "instances": [
+            ".expert-consult"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "name": "Hero promo banner carousel",
+          "selector": "#root > div.App > div.root-home > div:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "carousel-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "isif-promo-strip",
+          "name": "Introducing iSIF promo strip",
+          "selector": ".sif-banner.sif-banner-home",
+          "style": null,
+          "blocks": [
+            "columns-strip"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "quick-links",
+          "name": "Quick Links",
+          "selector": ".quick-links.quick-links-homepage",
+          "style": null,
+          "blocks": [
+            "cards-quicklink"
+          ],
+          "defaultContent": [
+            "h2"
+          ]
+        },
+        {
+          "id": "knowledge-centre",
+          "name": "Knowledge Centre",
+          "selector": ".knowledge",
+          "style": null,
+          "blocks": [
+            "cards-video"
+          ],
+          "defaultContent": [
+            "h2",
+            ".chip-container"
+          ]
+        },
+        {
+          "id": "recommended-schemes",
+          "name": "Recommended Schemes",
+          "selector": "#root > div.App > div.root-home > div.MuiContainer-root.MuiContainer-maxWidthLg.container.css-1qsxih2:nth-of-type(5)",
+          "style": null,
+          "blocks": [
+            "cards-fund"
+          ],
+          "defaultContent": [
+            "h2"
+          ]
+        },
+        {
+          "id": "our-funds",
+          "name": "Our Funds",
+          "selector": "#root > div.App > div.root-home > div.MuiContainer-root.MuiContainer-maxWidthLg.container.css-1qsxih2:nth-of-type(6)",
+          "style": null,
+          "blocks": [
+            "cards-category"
+          ],
+          "defaultContent": [
+            "h2"
+          ]
+        },
+        {
+          "id": "consult-experts",
+          "name": "Consult our Experts",
+          "selector": ".funds-section.pt-12",
+          "style": null,
+          "blocks": [
+            "form-lead"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}
