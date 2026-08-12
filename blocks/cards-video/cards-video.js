@@ -16,18 +16,31 @@ function canOptimize(src) {
   }
 }
 
+// Branded fallback shown when a source video thumbnail is unavailable. Some source
+// thumbnails were already broken placeholders at scrape time (the videos are private
+// / embedding-disabled, so YouTube generates no public thumbnail in any variant).
+const VIDEO_FALLBACK = 'https://main--icicipruamc--nikhil22bhatt.aem.page/icons/funds/video-fallback.svg';
+
 /**
- * Some source video thumbnails (unavailable/removed YouTube videos) 404 at origin.
- * Rather than render a broken-image icon, mark the card so CSS shows a neutral
- * placeholder tile behind the play affordance.
+ * Swap a thumbnail that fails to load for the branded fallback image, so every
+ * video card looks intentional instead of rendering a broken-image icon.
+ * Guarded against loops in case the fallback itself is unreachable.
  * @param {HTMLImageElement} img
  */
 function handleMissingThumb(img) {
   img.addEventListener('error', () => {
-    const imageCell = img.closest('.cards-video-card-image');
-    if (imageCell) imageCell.classList.add('cards-video-thumb-missing');
-    img.remove();
-  }, { once: true });
+    if (img.dataset.fallbackApplied) {
+      const imageCell = img.closest('.cards-video-card-image');
+      if (imageCell) imageCell.classList.add('cards-video-thumb-missing');
+      img.remove();
+      return;
+    }
+    img.dataset.fallbackApplied = 'true';
+    // Drop any <source> siblings so the fallback <img src> is what renders.
+    const picture = img.closest('picture');
+    if (picture) picture.querySelectorAll('source').forEach((s) => s.remove());
+    img.src = VIDEO_FALLBACK;
+  });
 }
 
 export default function decorate(block) {
