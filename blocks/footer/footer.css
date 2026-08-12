@@ -20,14 +20,16 @@ footer .footer .section {
   padding: 0 0 32px;
 }
 
-/* Link columns: the first band lays its 6 groups out in a row. */
-footer .footer .section:first-child {
+/* Link columns: footer.js groups each heading + list into a .footer-col, then
+   this wrapper lays those columns out in a row. Targeting the wrapper (not the
+   section) is robust to EDS flattening all six groups into one content block. */
+footer .footer .footer-columns {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 32px 24px;
 }
 
-footer .footer .section:first-child > div {
+footer .footer .footer-col {
   min-width: 0;
 }
 
@@ -88,13 +90,13 @@ footer .footer .section:last-child {
 }
 
 @media (width < 900px) {
-  footer .footer .section:first-child {
+  footer .footer .footer-columns {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (width < 600px) {
-  footer .footer .section:first-child {
+  footer .footer .footer-columns {
     grid-template-columns: repeat(2, 1fr);
   }
 }
